@@ -14,20 +14,20 @@ public class Main {
     }
     
     public static int makeArrayConsecutive2(int[] statues) {
-        int min = 99999;
-        int max = -999;
+        int min = 99999;  // Initialize min with a large value
+        int max = -999;   // Initialize max with a small value
         
         for (int i = 0; i < statues.length; i++) {
             if (statues[i] > max) {
-                max = statues[i];
+                max = statues[i];  // Update max if the current element is greater
             }
             
             if (statues[i] < min) {
-                min = statues[i];
+                min = statues[i];  // Update min if the current element is smaller
             }
         }
         
-        int diff = max - min;
-        return (diff + 1 - statues.length);
+        int diff = max - min;  // Calculate the difference between max and min
+        return (diff + 1 - statues.length);  // Return the number of additional statues needed
     }
 }
