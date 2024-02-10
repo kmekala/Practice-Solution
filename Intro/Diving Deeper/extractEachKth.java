@@ -14,37 +14,44 @@ public class Main {
     }
     
     public static int[] extractEachKth(int[] inputArray, int k) {
-        int[] arr = new int[inputArray.length];
-        int q = 0;
-        int p = 0;
-        int count = 1;
-        int flag = 1;
-        
-        for (int i = 0; i < inputArray.length; i++) {
-            if (count == k) {
-                count = 1;
-                arr[i] = 10101;
-                flag = 0;
-            } else {
-                arr[i] = inputArray[i];
-                count++;
-                q++;
-            }
-        }
-        
-        if (flag == 1) {
-            return inputArray;
+    int[] arr = new int[inputArray.length];
+    int q = 0;
+    int p = 0;
+    int count = 1;
+    int flag = 1;
+    
+    // Iterate over the inputArray
+    for (int i = 0; i < inputArray.length; i++) {
+        if (count == k) {
+            // If count equals k, it means it's the kth element
+            count = 1;
+            arr[i] = 10101; // Use a special value (10101) to mark the extracted element
+            flag = 0; // Set flag to indicate that at least one element was extracted
         } else {
-            int[] arr1 = new int[q];
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] == 10101) {
-                    
-                } else {
-                    arr1[p] = arr[i];
-                    p++;
-                }
-            }
-            return arr1;
+            // If count is not equal to k, copy the element from inputArray to arr
+            arr[i] = inputArray[i];
+            count++;
+            q++;
         }
     }
+    
+    if (flag == 1) {
+        // If no elements were extracted (flag is still 1), return the inputArray
+        return inputArray;
+    } else {
+        // If at least one element was extracted
+        int[] arr1 = new int[q];
+        // Iterate over arr to create a new array (arr1) without the extracted elements
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 10101) {
+                // Skip the extracted element
+            } else {
+                // Copy the non-extracted element to arr1
+                arr1[p] = arr[i];
+                p++;
+            }
+        }
+        return arr1; // Return the new array without the extracted elements
+    }
+}
 }
