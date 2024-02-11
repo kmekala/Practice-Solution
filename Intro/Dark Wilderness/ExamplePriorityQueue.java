@@ -1,34 +1,37 @@
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class ExamplePriorityQueue {
     public static void main(String[] args) {
-        Queue<String> myPriorityQueue = new PriorityQueue<>();
+        PriorityQueue<Integer> myPriorityQueue = new PriorityQueue<>();
 
-        // isEmpty(): Checks if the queue is empty
-        boolean isEmpty = myPriorityQueue.isEmpty();
-        System.out.println("Is the queue empty? " + isEmpty);
+        // offer(E element): Inserts the specified element into the priority queue
+        myPriorityQueue.offer(5);
+        myPriorityQueue.offer(2);
+        myPriorityQueue.offer(7);
+        myPriorityQueue.offer(1);
 
-        // offer(E element): Adds an element to the back of the queue
-        myPriorityQueue.offer("Apple");
-        myPriorityQueue.offer("Banana");
-        myPriorityQueue.offer("Orange");
-
-        // size(): Returns the number of elements in the queue
+        // size(): Returns the number of elements in the priority queue
         int size = myPriorityQueue.size();
-        System.out.println("Size of the queue: " + size);
+        System.out.println("Size of the priority queue: " + size);
 
-        // peek(): Retrieves, but does not remove, the element at the front of the queue
-        String peekedElement = myPriorityQueue.peek();
-        System.out.println("Element at the front of the queue (peek): " + peekedElement);
+        // peek(): Retrieves, but does not remove, the head of the priority queue
+        Integer headElement = myPriorityQueue.peek();
+        System.out.println("Head element of the priority queue: " + headElement);
 
-        // poll(): Retrieves and removes the element at the front of the queue
-        String polledElement = myPriorityQueue.poll();
-        System.out.println("Element removed from the front of the queue (poll): " + polledElement);
+        // poll(): Retrieves and removes the head of the priority queue
+        Integer removedElement = myPriorityQueue.poll();
+        System.out.println("Removed element from the priority queue: " + removedElement);
 
-        // clear(): Removes all elements from the queue
+        // isEmpty(): Checks if the priority queue is empty
+        boolean isEmpty = myPriorityQueue.isEmpty();
+        System.out.println("Is the priority queue empty? " + isEmpty);
+
+        // contains(Object element): Checks if the priority queue contains a specific element
+        boolean containsElement = myPriorityQueue.contains(7);
+        System.out.println("Does the priority queue contain '7'? " + containsElement);
+
+        // clear(): Removes all elements from the priority queue
         myPriorityQueue.clear();
-
-        System.out.println("Updated queue: " + myPriorityQueue);
+        System.out.println("Priority queue after clearing: " + myPriorityQueue);
     }
 }
