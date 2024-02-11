@@ -5,34 +5,45 @@ public class ExampleList {
     public static void main(String[] args) {
         List<String> myList = new ArrayList<>();
 
-        // Adding elements to the list
+        // isEmpty(): Checks if the list is empty
+        boolean isEmpty = myList.isEmpty();
+        System.out.println("Is the list empty? " + isEmpty);
+
+        // add(E element): Adds an element to the end of the list
         myList.add("Apple");
         myList.add("Banana");
         myList.add("Orange");
-        myList.add("Apple");
 
         // size(): Returns the number of elements in the list
         int size = myList.size();
         System.out.println("Size of the list: " + size);
 
-        // isEmpty(): Checks if the list is empty
-        boolean isEmpty = myList.isEmpty();
-        System.out.println("Is the list empty? " + isEmpty);
-
         // contains(Object element): Checks if the list contains a specific element
         boolean containsElement = myList.contains("Banana");
         System.out.println("Does the list contain 'Banana'? " + containsElement);
 
-        // indexOf(Object element): Returns the index of the first occurrence of the specified element in the list
-        int firstIndex = myList.indexOf("Apple");
-        System.out.println("Index of the first occurrence of 'Apple': " + firstIndex);
+        // remove(Object element): Removes the first occurrence of a specific element from the list
+        boolean removedElement = myList.remove("Apple");
+        System.out.println("Was 'Apple' removed from the list? " + removedElement);
 
-        // lastIndexOf(Object element): Returns the index of the last occurrence of the specified element in the list
-        int lastIndex = myList.lastIndexOf("Apple");
-        System.out.println("Index of the last occurrence of 'Apple': " + lastIndex);
+        // get(int index): Retrieves the element at the specified index
+        String elementAtIndex = myList.get(1);
+        System.out.println("Element at index 1: " + elementAtIndex);
 
-        // subList(int fromIndex, int toIndex): Returns a new list containing elements from the specified range
+        // set(int index, E element): Replaces the element at the specified index with a new element
+        myList.set(0, "Grape");
+        System.out.println("Updated list: " + myList);
+
+        // indexOf(Object element): Returns the index of the first occurrence of a specific element in the list
+        int index = myList.indexOf("Banana");
+        System.out.println("Index of 'Banana': " + index);
+
+        // subList(int fromIndex, int toIndex): Returns a view of the portion of the list between the specified indexes
         List<String> subList = myList.subList(1, 3);
-        System.out.println("Sublist from index 1 to 3: " + subList);
+        System.out.println("Sublist: " + subList);
+
+        // clear(): Removes all elements from the list
+        myList.clear();
+        System.out.println("List after clearing: " + myList);
     }
 }
