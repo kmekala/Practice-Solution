@@ -4,12 +4,12 @@ Examples and features for each type of collection in Java:
    - Ordered collection that allows duplicate elements.
    - Examples: `ArrayList`, `LinkedList`.
    - additional methods:
-    * size(): Returns the number of elements in the list.
-    * isEmpty(): Checks if the list is empty.
-    * contains(Object element): Checks if the list contains a specific element.
-    * indexOf(Object element): Returns the index of the first occurrence of the specified element in the list.
-    * lastIndexOf(Object element): Returns the index of the last occurrence of the specified element in the list.
-    * subList(int fromIndex, int toIndex): Returns a new list containing elements from the specified range.
+       * size(): Returns the number of elements in the list.
+       * isEmpty(): Checks if the list is empty.
+       * contains(Object element): Checks if the list contains a specific element.
+       * indexOf(Object element): Returns the index of the first occurrence of the specified element in the list.
+       * lastIndexOf(Object element): Returns the index of the last occurrence of the specified element in the list.
+       * subList(int fromIndex, int toIndex): Returns a new list containing elements from the specified range.
    - Features:
      - Access elements by index.
      - Add elements at a specific position.
@@ -43,12 +43,12 @@ Examples and features for each type of collection in Java:
      - Remove elements from the set.
      - Check if an element exists in the set.
    - additional methods:
-    * size(): Returns the number of elements in the set.
-    * isEmpty(): Checks if the set is empty.
-    * contains(Object element): Checks if the set contains a specific element.
-    * remove(Object element): Removes the specified element from the set.
-    * clear(): Removes all elements from the set.
-    * addAll(Collection<? extends E> collection): Adds all elements from a collection to the set.
+       * size(): Returns the number of elements in the set.
+       * isEmpty(): Checks if the set is empty.
+       * contains(Object element): Checks if the set contains a specific element.
+       * remove(Object element): Removes the specified element from the set.
+       * clear(): Removes all elements from the set.
+       * addAll(Collection<? extends E> collection): Adds all elements from a collection to the set.
 
    ```java
    Set<Integer> numbers = new HashSet<>();
@@ -70,12 +70,12 @@ Examples and features for each type of collection in Java:
      - Remove elements from the front of the queue.
      - Peek at the element at the front of the queue.
    - additional methods:
-    * size(): Returns the number of elements in the queue.
-    * isEmpty(): Checks if the queue is empty.
-    * peek(): Retrieves, but does not remove, the element at the front of the queue.
-    * poll(): Retrieves and removes the element at the front of the queue.
-    * offer(E element): Adds an element to the back of the queue.
-    * clear(): Removes all elements from the queue.
+       * size(): Returns the number of elements in the queue.
+       * isEmpty(): Checks if the queue is empty.
+       * peek(): Retrieves, but does not remove, the element at the front of the queue.
+       * poll(): Retrieves and removes the element at the front of the queue.
+       * offer(E element): Adds an element to the back of the queue.
+       * clear(): Removes all elements from the queue.
 
    ```java
    Queue<String> queue = new LinkedList<>();
@@ -99,13 +99,13 @@ Examples and features for each type of collection in Java:
      - Check if a key exists in the map.
      - Iterate over keys or key-value pairs.
    - additional methods:
-    * size(): Returns the number of key-value pairs in the map.
-    * isEmpty(): Checks if the map is empty.
-    * containsKey(Object key): Checks if the map contains a specific key.
-    * containsValue(Object value): Checks if the map contains a specific value.
-    * get(Object key): Returns the value associated with a specified key.
-    * put(K key, V value): Associates the specified value with the specified key in the map.
-    * remove(Object key): Removes the key-value pair associated with the specified key from the map.
+       * size(): Returns the number of key-value pairs in the map.
+       * isEmpty(): Checks if the map is empty.
+       * containsKey(Object key): Checks if the map contains a specific key.
+       * containsValue(Object value): Checks if the map contains a specific value.
+       * get(Object key): Returns the value associated with a specified key.
+       * put(K key, V value): Associates the specified value with the specified key in the map.
+       * remove(Object key): Removes the key-value pair associated with the specified key from the map.
 
    ```java
    Map<String, Integer> ages = new HashMap<>();
@@ -131,12 +131,12 @@ Examples and features for each type of collection in Java:
      - Pop elements from the top of the stack.
      - Peek at the element at the top of the stack.
    - additional methods
-    * size(): Returns the number of elements in the stack.
-    * isEmpty(): Checks if the stack is empty.
-    * peek(): Retrieves, but does not remove, the element at the top of the stack.
-    * pop(): Retrieves and removes the element at the top of the stack.
-    * push(E element): Adds an element to the top of the stack.
-    * search(Object element): Returns the 1-based position of the element from the top of the stack.
+       * size(): Returns the number of elements in the stack.
+       * isEmpty(): Checks if the stack is empty.
+       * peek(): Retrieves, but does not remove, the element at the top of the stack.
+       * pop(): Retrieves and removes the element at the top of the stack.
+       * push(E element): Adds an element to the top of the stack.
+       * search(Object element): Returns the 1-based position of the element from the top of the stack.
 
    ```java
    Stack<String> stack = new Stack<>();
