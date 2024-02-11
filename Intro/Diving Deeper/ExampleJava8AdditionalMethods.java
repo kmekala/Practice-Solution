@@ -1,3 +1,10 @@
+/*
+forEach() is used to iterate over the elements of a list and perform an action on each element.
+removeIf() removes elements from the list that satisfy a given condition.
+replaceAll() replaces each element in the list with the result of applying a function to it.
+merge() combines values in a map using a merge function. In this example, we create a map of name-age pairs and merge new entries into it.
+computeIfAbsent() computes and adds a value to a map if the specified key is not already present.
+*/
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
