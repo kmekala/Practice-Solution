@@ -1,0 +1,61 @@
+/*forEach() with a lambda expression is used to iterate over the elements of a list and perform an action on each element.
+removeIf() with a lambda predicate is used to remove elements from the list that satisfy a given condition.
+replaceAll() with a lambda unary operator is used to replace each element in the list with the result of applying a function to it.
+merge() with a lambda bifunction is used to combine values in a map using a merge function.
+computeIfAbsent() with a lambda function is used to compute and add a value to a map if the specified key is not already present.
+*/
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class ExampleJava8Lambda {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("John", "Jane", "Alice", "Bob");
+
+        // forEach() with lambda expression
+        System.out.println("Names:");
+        names.forEach(name -> System.out.println(name));
+        System.out.println();
+
+        // removeIf() with lambda predicate
+        Predicate<String> startsWithJ = name -> name.startsWith("J");
+        names.removeIf(startsWithJ);
+        System.out.println("Names after removeIf():");
+        names.forEach(System.out::println);
+        System.out.println();
+
+        // replaceAll() with lambda unary operator
+        names.replaceAll(name -> name.toUpperCase());
+        System.out.println("Names after replaceAll():");
+        names.forEach(System.out::println);
+        System.out.println();
+
+        // merge() with lambda bifunction
+        Map<String, Integer> ageMap = names.stream()
+                .collect(Collectors.toMap(name -> name, name -> name.length()));
+
+        BiFunction<Integer, Integer, Integer> sumAges = (age1, age2) -> age1 + age2;
+        ageMap.merge("John", 30, sumAges);
+        ageMap.merge("Alice", 25, sumAges);
+        System.out.println("Age map:");
+        ageMap.forEach((name, age) -> System.out.println(name + ": " + age));
+        System.out.println();
+
+        // computeIfAbsent() with lambda function
+        Map<String, String> nicknameMap = names.stream()
+                .collect(Collectors.toMap(name -> name, name -> name.substring(0, 3)));
+
+        Consumer<String> unknownNickname = name -> nicknameMap.putIfAbsent(name, "Unknown");
+        unknownNickname.accept("Alice");
+        unknownNickname.accept("Bob");
+        System.out.println("Nickname map:");
+        nicknameMap.forEach((name, nickname) -> System.out.println(name + ": " + nickname));
+        System.out.println();
+    }
+}
