@@ -151,4 +151,61 @@ Examples and features for each type of collection in Java:
    System.out.println(stack); // Output: ["First", "Second"]
    ```
 
-These examples demonstrate some common operations and features of each collection type. However, the Java Collections Framework provides many more methods and functionalities for each collection type.
+ Commonly used methods of the `StringBuffer` class along with examples:
+
+**append(String str)**:
+   - Appends the specified string to the existing string buffer.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello");
+   buffer.append(" World");
+   System.out.println(buffer); // Output: "Hello World"
+   ```
+
+**insert(int offset, String str)**:
+   - Inserts the specified string at the specified position within the string buffer.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello");
+   buffer.insert(5, " World");
+   System.out.println(buffer); // Output: "Hello World"
+   ```
+
+**delete(int start, int end)**:
+   - Deletes the characters between the specified start and end positions from the string buffer.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello World");
+   buffer.delete(6, 11);
+   System.out.println(buffer); // Output: "Hello"
+   ```
+
+**reverse()**:
+   - Reverses the order of characters in the string buffer.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello");
+   buffer.reverse();
+   System.out.println(buffer); // Output: "olleH"
+   ```
+
+**replace(int start, int end, String str)**:
+   - Replaces the characters between the specified start and end positions with the specified string.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello World");
+   buffer.replace(6, 11, "Universe");
+   System.out.println(buffer); // Output: "Hello Universe"
+   ```
+
+**length()**:
+   - Returns the length (number of characters) of the string buffer.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello");
+   int length = buffer.length();
+   System.out.println(length); // Output: 5
+   ```
+
+**substring(int start)** and **substring(int start, int end)**:
+   - Returns a substring of the string buffer, either from the specified start position to the end of the string buffer or with the specified start and end positions.
+   ```java
+   StringBuffer buffer = new StringBuffer("Hello World");
+   String substring1 = buffer.substring(6);
+   String substring2 = buffer.substring(0, 5);
+   System.out.println(substring1); // Output: "World"
+   System.out.println(substring2); // Output: "Hello"
