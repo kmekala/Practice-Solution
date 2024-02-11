@@ -1,3 +1,12 @@
+/*Predicate<Integer>: It takes an Integer parameter and returns a boolean indicating whether the number is even or not.
+Consumer<String>: It takes a String parameter and performs an action on it, in this case, printing the string in uppercase.
+Function<Integer, String>: It takes an Integer parameter and returns a String by converting the number to a string.
+Supplier<Double>: It does not take any input parameter and supplies a Double value, in this case, a random number.
+UnaryOperator<Integer>: It takes an Integer parameter and returns an Integer by squaring the number.
+BinaryOperator<Integer>: It takes two Integer parameters and returns an Integer by adding them together.
+Each lambda expression represents an implementation of the corresponding functional interface. The lambda expressions provide the behavior or logic to be executed when the functional interface's method is called.
+By using lambda expressions and functional interfaces, you can write concise and expressive code that focuses on the behavior you want to achieve. Lambda expressions enable you to create function objects easily and pass behavior as parameters, making your code more flexible and modular.
+*/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
